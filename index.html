@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine Sayang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffcccc;
+            color: #d63384;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        .slides {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            font-size: 24px;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+        .heart {
+            font-size: 100px;
+            animation: pulse 1s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>selamat hari kasih sayang, tacma❤️</h1>
+        <div class="slides">
+            <div class="slide active">semoga hari ini penuh cinta dan kebahagiaan. </div>
+            <div class="slide">makasi sudah selalu ada buat aku. </div>
+            <div class="slide">aku berharap kita selalu bersama selamanya!</div>
+	    <div class="slide"> i love you mas ku sayang 😘💖</div>
+
+        </div>
+        <div class="heart">❤️</div>
+    </div>
+    <script>
+        let index = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.classList.remove('active'));
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        setInterval(showSlides, 3000);
+    </script>
+</body>
+</html>
